@@ -19,8 +19,9 @@
 					"source": {
 						"type": "DelimitedTextSource",
 						"storeSettings": {
-							"type": "HttpReadSettings",
-							"requestMethod": "GET"
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings"
@@ -45,40 +46,63 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "EMP_ID",
-									"type": "String"
+									"name": "Name",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "EMP_ID",
-									"type": "Decimal"
+									"name": "NAME",
+									"type": "String",
+									"physicalType": "VARCHAR"
 								}
 							},
 							{
 								"source": {
-									"name": "EMP_NAME",
-									"type": "String"
+									"name": "age",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "EMP_NAME",
-									"type": "String"
+									"name": "AGE",
+									"type": "Decimal",
+									"physicalType": "NUMBER",
+									"scale": 0,
+									"precision": 38
 								}
 							},
 							{
 								"source": {
-									"name": "CITY",
-									"type": "String"
+									"name": "city",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "CITY",
-									"type": "String"
+									"type": "String",
+									"physicalType": "VARCHAR"
+								}
+							},
+							{
+								"source": {
+									"name": "mailID"
+								},
+								"sink": {
+									"name": "MAILID",
+									"type": "String",
+									"physicalType": "VARCHAR"
 								}
 							}
-						]
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
 					}
 				},
 				"inputs": [
 					{
-						"referenceName": "github_sample",
+						"referenceName": "DS_Mergecsv",
 						"type": "DatasetReference"
 					}
 				],
