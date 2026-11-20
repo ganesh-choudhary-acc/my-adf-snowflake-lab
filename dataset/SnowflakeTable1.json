@@ -9,8 +9,8 @@
 		"type": "SnowflakeV2Table",
 		"schema": [],
 		"typeProperties": {
-			"schema": "POC_SCHEMA",
-			"table": "GITHUB_DATA"
+			"schema": "PUBLIC",
+			"table": "PERSON_DETAILS"
 		}
 	}
 }
