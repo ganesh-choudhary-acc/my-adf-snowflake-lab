@@ -84,7 +84,9 @@
 							},
 							{
 								"source": {
-									"name": "mailID"
+									"name": "mailID",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "MAILID",
