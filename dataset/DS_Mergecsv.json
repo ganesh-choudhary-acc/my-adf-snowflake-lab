@@ -33,7 +33,7 @@
 				"type": "String"
 			},
 			{
-				"name": "mail ID",
+				"name": "mailID",
 				"type": "String"
 			}
 		]
