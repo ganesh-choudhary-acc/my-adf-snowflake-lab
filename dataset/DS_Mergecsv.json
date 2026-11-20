@@ -15,8 +15,9 @@
 				"container": "raw"
 			},
 			"columnDelimiter": ",",
+			"rowDelimiter": "",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
+			"firstRowAsHeader": false,
 			"quoteChar": "\""
 		},
 		"schema": [
